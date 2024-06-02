@@ -9,7 +9,6 @@ services:
     hostname: web-server
     volumes:
       - ./web-server:/opt/web-server
-    command: npm start
     ports:
       - 3000:3000
 
@@ -23,7 +22,6 @@ services:
       DATABASE_URL: postgresql://postgres:postgres@database:5432/postgres
     volumes:
       - ./api-server:/opt/api-server
-    command: uvicorn app.main:app --reload --host 0.0.0.0 --port 8000
     ports:
       - 8000:8000
     depends_on:
