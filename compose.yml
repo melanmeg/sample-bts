@@ -1,9 +1,6 @@
-version: "3.9"
-
 services:
   web-server:
-    build:
-      context: ./web-server
+    build: ./web-server
     image: web-server:latest
     container_name: web-server
     hostname: web-server
@@ -14,8 +11,7 @@ services:
       - 3000:3000
 
   api-server:
-    build:
-      context: ./api-server
+    build: ./api-server
     image: api-server:latest
     container_name: api-server
     hostname: api-server
