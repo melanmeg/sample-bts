@@ -22,7 +22,7 @@ services:
         condition: service_healthy
 
   database:
-    image: postgres:15.12-alpine3.21
+    build: ./database
     container_name: database
     hostname: database
     platform: linux/amd64
